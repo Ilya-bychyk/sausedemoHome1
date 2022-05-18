@@ -17,10 +17,20 @@ public class InventoryPageTest extends BaseTest {
     }
 
     @Test
-    public void addToCartButtonTest () {
+    public void addToCartButtonTest() {
         inventoryPage.clickAddToCartButton();
         String actualTextOfRemoveCartButton = inventoryPage.getTextOfRemoveButton();
         String expectedTextOfRemoveCartButton = "REMOVE";
         Assert.assertEquals(actualTextOfRemoveCartButton, expectedTextOfRemoveCartButton);
     }
+
+    @Test (dependsOnMethods = "addToCartButtonTest")
+    public void removeButtonTest() {
+       inventoryPage.clickRemoveButton();
+       String actualTextOfAddToCartButton = inventoryPage.getTextOfAddToCartButton();
+       String expectedTextOfAddToCartButton = "ADD TO CART";
+       Assert.assertEquals(actualTextOfAddToCartButton, expectedTextOfAddToCartButton, "Actual result is equal to expected");
+    }
+
+
 }

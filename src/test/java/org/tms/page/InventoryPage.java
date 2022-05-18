@@ -29,4 +29,8 @@ public class InventoryPage extends BasePage {
     public String getTextOfRemoveButton() {
         return removeCartButton.getText();
     }
+
+    public void clickRemoveButton() {
+        removeCartButton.click();
+    }
 }

@@ -3,7 +3,6 @@
 <suite name="Smoke" verbose="1">
     <test name="LoginPageTest">
         <classes>
-
             <class name="org.tms.test.InventoryPageTest"></class>
         </classes>
     </test>
