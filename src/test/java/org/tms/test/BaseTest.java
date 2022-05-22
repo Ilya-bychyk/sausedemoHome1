@@ -14,8 +14,8 @@ public class BaseTest {
         driver = DriverSingleton.getDriver();
     }
 
-   // @AfterClass
-   // public void stopBrowser() {
-    //    DriverSingleton.closeDriver();
-   // }
+    @AfterClass
+    public void stopBrowser() {
+        DriverSingleton.closeDriver();
+    }
 }
